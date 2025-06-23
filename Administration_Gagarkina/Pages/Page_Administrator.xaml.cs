@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Administration_Gagarkina.Pages
 {
     /// <summary>
@@ -24,7 +25,7 @@ namespace Administration_Gagarkina.Pages
         public Page_Administrator()
         {
             InitializeComponent();
-            GridAdmin.ItemsSource = ConnectBase.entObj.Employee;
+            GridAdmin.ItemsSource = ConnectBase.entObj.Employee.Where(x => x.EmployeeID == UserControlHelper.EmployeeID).ToList();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,16 @@ namespace Administration_Gagarkina.Pages
         }
 
         private void GridAdmin_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Search_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
