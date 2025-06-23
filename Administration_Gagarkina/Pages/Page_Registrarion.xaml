@@ -11,8 +11,8 @@
 
     <Grid>
         <Border Background="#18252C" 
-                Width="300"
-                Height="350"
+                Width="320"
+                Height="370"
                 BorderBrush="Black" 
                 BorderThickness="1,1,1,1" 
                 CornerRadius="30,30,30,30">
@@ -25,10 +25,10 @@
                  HorizontalAlignment="Center">
 
                         <TextBlock 
-                        Text="Email:"
+                        Text="Name:"
                         Margin="5"
                         Foreground="White"
-                        Width="50"
+                        Width="120"
                         />
 
                         <TextBox 
@@ -47,7 +47,7 @@
                         <TextBlock 
                      Text="Password:"
                      Margin="5"
-                     Width="50"
+                     Width="120"
                      Foreground="White"
                      />
 
@@ -60,14 +60,58 @@
                       Style="{StaticResource TextBoxPassword}"/>
                     </StackPanel>
 
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+
+                        <TextBlock 
+                                Text="Repeat the password:"
+                                Margin="5"
+                                Width="120"
+                                Foreground="White"
+                                />
+
+                        <PasswordBox 
+                                x:Name="Psb_Repeat_Passw"
+                                Width="160"
+                                Margin="5"
+                                Foreground="White"
+                                Background="#18252C"
+                                Style="{StaticResource TextBoxPassword}"/>
+                    </StackPanel>
+
                     <Button
                       Width="150"
                       Height="30"
-                      Content="Авторизоваться"
+                      Content="Зарегистрироваться"
                       Margin="10"
                       Style="{StaticResource Button_Authorization}"
                       Name="Btn_Authorization"/>
+                </StackPanel>
 
+                <Label VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       Height="30"
+                       Margin="5"
+                       HorizontalContentAlignment="Center"
+                       Foreground="White"
+                       FontSize="10">
+
+                    <TextBlock>
+                    <Run Text="Вернуться на страницу" />
+                    <Hyperlink NavigateUri="Page_Authorization.xaml">
+                    <Run Text="Авторизации"
+                         Foreground="White"
+                         FontWeight="Bold"/>
+                    </Hyperlink>
+                    </TextBlock>
+                </Label>
+
+                <StackPanel>
+                    <Image Source="C:\Users\Valya\OneDrive\Рабочий стол\производственная практика №2\Administration_Gagarkina\Administration_Gagarkina\Image\профиль2.png"
+                           Width="90"
+                           VerticalAlignment="Center"
+                           Margin="10"
+                           />
                 </StackPanel>
 
             </Grid>

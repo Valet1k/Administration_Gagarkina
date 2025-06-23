@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d23233aee2e5475dbb7d3f409dd69dad" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Overtime_ADMModel.Department" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Overtime_ADMModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Overtime_ADMModel.Overtime" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Overtime_ADMModel.Post" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Overtime_ADMModel.Role" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Overtime_ADMModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="Overtime_ADMModel.FK__Employee__Depart__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="Overtime_ADMModel.FK__Employee__PostID__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="Overtime_ADMModel.FK__Employee__RoleID__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Overtime_ADMModel.FK__Overtime__Employ__4222D4EF" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
