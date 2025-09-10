@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Administration_Gagarkina"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="Учёт переработок сотрудников" 
         Height="450" 
-        Width="800">
+        Width="815"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <Frame
             Name="FrmMain"

@@ -26,6 +26,40 @@ namespace Administration_Gagarkina.Pages
             InitializeComponent();
         }
 
+
+        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            // Скрываем placeholder при получении фокуса
+            Ps_Placeholder.Visibility = Visibility.Collapsed;
+        }
+
+        private void PasswordBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            // Показываем placeholder только если пароль пустой
+            if (string.IsNullOrEmpty(Psb_Passw.Password))
+            {
+                Ps_Placeholder.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            // Динамически скрываем/показываем placeholder при изменении пароля
+            if (string.IsNullOrEmpty(Psb_Passw.Password))
+            {
+                // Если пароль пустой и нет фокуса - показываем placeholder
+                if (!Psb_Passw.IsFocused)
+                {
+                    Ps_Placeholder.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                // Если есть пароль - скрываем placeholder
+                Ps_Placeholder.Visibility = Visibility.Collapsed;
+            }
+        }
+
         private void Btn_Authorization_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -51,7 +85,7 @@ namespace Administration_Gagarkina.Pages
                             }
                             break;
 
-                         case 2:
+                        case 2:
                             {
                                 UserControlHelper.EmployeeID = userObj.EmployeeID;
                                 FrameApp.frmObj.Navigate(new Pages.Page_Employee());
@@ -67,6 +101,14 @@ namespace Administration_Gagarkina.Pages
                     MessageBoxButton.OK, 
                     MessageBoxImage.Warning);
             }
+        }
+
+        private void Txb_Email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                Psb_Passw.Focus();
+            } 
         }
     }
 }

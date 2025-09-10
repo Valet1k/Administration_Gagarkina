@@ -6,20 +6,94 @@
       xmlns:local="clr-namespace:Administration_Gagarkina.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page_Employee">
+      Title="Page_Employee"
+      Background="#D3D3FF">
 
-    <Grid Background="White">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-        <Button 
-            VerticalAlignment="Top"
-            HorizontalAlignment="Right"
-            Name="BtnBack"
-            Width="130"
-            Height="30"
-            Click="BtnBack_Click"
-            Content="Страница сотрудника"
-            Margin="5"/>
+        <Border
+          Grid.Row="0"
+          Width="799"
+          Height="70"
+          VerticalAlignment="Top"
+          Background="#9D9DCC"
+          BorderBrush="#9D9DCC"
+          BorderThickness="1,1,1,1"
+          CornerRadius="10,10,20,20">
 
+            <Grid>
+                <StackPanel>
+                    <Image
+                        Width="45"
+                        Margin="10"
+                        HorizontalAlignment="Right"
+                        Source="C:\Users\Valya\OneDrive\Рабочий стол\производственная практика №2\Administration_Gagarkina\Administration_Gagarkina\Image\профиль2.png" />
+                </StackPanel>
 
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+                    <Button
+                      Width="150"
+                      Height="30"
+                      Content="Назад"
+                      Name="Btn_Back"
+                      Click="Btn_Back_Click"
+                      Margin="10,0,5,0"
+                      Style="{StaticResource Button_Employee}"/>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Background="White" 
+          Width="370"
+          Grid.Row="1"
+          Height="140"
+          HorizontalAlignment="Left"
+          VerticalAlignment="Top"
+          Margin="6"
+          BorderBrush="Black" 
+          BorderThickness="1,1,1,1" 
+          CornerRadius="30,30,30,30">
+            <Border BorderBrush="Black" 
+                    BorderThickness="1,0,0,0"
+                    HorizontalAlignment="Left"
+                     Margin="155,0,0,0">
+                
+            </Border>
+        </Border>
+
+        <DataGrid
+         Name="GridEmployee"
+         Grid.Row="2"
+         Margin="10"
+         AutoGenerateColumns="False"
+         IsReadOnly="True"
+         MinHeight="140"
+         MinWidth="20"
+         VerticalScrollBarVisibility="Auto">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                 Width="*"
+                 Binding="{Binding Surname}"
+                 Header="Часы переработки" />
+
+                <DataGridTextColumn
+                 Width="*"
+                 Binding="{Binding Post.Name_Post}"
+                 Header="Дата переработки" />
+
+                <DataGridTextColumn
+                 Width="*"
+                 Binding="{Binding Post.Name_Post}"
+                 Header="Описание переработки" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
