@@ -44,7 +44,7 @@ namespace Administration_Gagarkina.Pages
                 MessageBox.Show("Не удалось получить данные переработок сотрудника");
                 return;
             }
-            FrameApp.frmObj.Navigate(new Pages.View_An_Employee(employee));
+            FrameApp.frmObj.Navigate(new Pages.Page_Employee(employee));
 
         }
 
@@ -57,6 +57,20 @@ namespace Administration_Gagarkina.Pages
         private void SearchTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Btn_Search_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (SearchTextBox.Text =="")
+            {
+                GridAdmin.ItemsSource = ConnectBase.entObj.Employee.ToList();
+            } 
+            else
+            {
+                GridAdmin.ItemsSource = ConnectBase.entObj.Employee.Where(x => x.Surname.StartsWith(SearchTextBox.Text)).ToList();
+            }
+            
         }
     }
 }

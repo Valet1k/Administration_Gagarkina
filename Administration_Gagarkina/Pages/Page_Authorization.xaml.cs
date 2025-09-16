@@ -88,7 +88,7 @@ namespace Administration_Gagarkina.Pages
                         case 2:
                             {
                                 UserControlHelper.EmployeeID = userObj.EmployeeID;
-                                FrameApp.frmObj.Navigate(new Pages.Page_Employee());
+                                FrameApp.frmObj.Navigate(new Pages.Page_Employee(userObj));
                             }
                             break;
                     }

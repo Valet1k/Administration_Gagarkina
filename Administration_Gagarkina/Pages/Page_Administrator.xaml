@@ -110,6 +110,7 @@
                                 Padding="0"
                                 Background="Transparent"
                                 BorderThickness="0"
+                                Click="Btn_Search_Click"
                                 Cursor="Hand"
                                 Foreground="White"
                                 Style="{StaticResource SearchButton}">

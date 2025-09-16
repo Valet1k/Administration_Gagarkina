@@ -138,10 +138,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\View_An_Employee.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Page_Administrator.xaml.cs">
@@ -155,9 +151,6 @@
     </Compile>
     <Compile Include="Pages\Page_Registrarion.xaml.cs">
       <DependentUpon>Page_Registrarion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\View_An_Employee.xaml.cs">
-      <DependentUpon>View_An_Employee.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
