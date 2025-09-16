@@ -22,6 +22,9 @@ namespace Administration_Gagarkina.Pages
     /// </summary>
     public partial class Page_Employee : Page
     {
+
+        Employee _employee;
+
         public Page_Employee(Employee employee)
         {
             InitializeComponent();
@@ -33,6 +36,8 @@ namespace Administration_Gagarkina.Pages
             {
                 Btn_add_overtime.Visibility = Visibility.Hidden;
             }
+
+            // поправить штуку, что если админ переходит на пользователя без админки кнопка изчезает
 
 
             Txb_FIO.Text = $"{employee.Surname} {employee.Name} {employee.Patronymic}";
@@ -51,12 +56,18 @@ namespace Administration_Gagarkina.Pages
 
             Txb_total_hours_on_month.Text = $"Переработано за {currentDate:MMMM}: {monthlyHours} часов";
 
+            _employee = employee;
 
         }
 
         private void Btn_Back_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frmObj.GoBack();
+        }
+
+        private void Btn_add_overtime_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new Pages.Page_AddOvertime(_employee));
         }
     }
 }

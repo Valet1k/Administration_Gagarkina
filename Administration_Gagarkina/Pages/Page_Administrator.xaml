@@ -39,6 +39,16 @@
                     Content="Назад"
                     Style="{StaticResource Button_Admin}" />
 
+
+                <Button
+                    Name="Btn_Addovertime"
+                    Width="150"
+                    Height="30"
+                    Margin="190,0,0,0"
+                    Click="Btn_Addovertime_Click"
+                    Content="Добавить переработку"
+                    Style="{StaticResource Button_Admin}" />
+
                 <StackPanel>
                     <Image
                         Width="45"

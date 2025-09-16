@@ -72,5 +72,10 @@ namespace Administration_Gagarkina.Pages
             }
             
         }
+
+        private void Btn_Addovertime_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new Pages.Page_AddOvertime());
+        }
     }
 }

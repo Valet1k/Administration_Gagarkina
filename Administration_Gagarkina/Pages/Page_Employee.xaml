@@ -42,6 +42,7 @@
 
                     <Button
                         Name="Btn_add_overtime"
+                        Click="Btn_add_overtime_Click"
                         Width="150"
                         Height="30"
                         Margin="10"
