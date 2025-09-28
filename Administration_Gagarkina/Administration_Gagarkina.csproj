@@ -138,6 +138,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Page_GiveHolliday.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Page_Registrarion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +163,12 @@
     </Compile>
     <Compile Include="Pages\Page_Employee.xaml.cs">
       <DependentUpon>Page_Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_GiveHolliday.xaml.cs">
+      <DependentUpon>Page_GiveHolliday.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_info.xaml.cs">
+      <DependentUpon>Page_info.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Page_Registrarion.xaml.cs">
       <DependentUpon>Page_Registrarion.xaml</DependentUpon>
@@ -209,6 +223,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Image\Info.png" />
     <Resource Include="Image\герб.png" />
     <Resource Include="без фона ico.ico" />
     <Resource Include="Image\Лупа.png" />

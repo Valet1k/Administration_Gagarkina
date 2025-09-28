@@ -1,14 +1,14 @@
 ﻿<Page
-    x:Class="Administration_Gagarkina.Pages.Page_AddOvertime"
+    x:Class="Administration_Gagarkina.Pages.Page_GiveHolliday"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Administration_Gagarkina.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Page_AddOvertime"
+    Title="Page_GiveHolliday"
     d:DesignHeight="450"
     d:DesignWidth="800"
-    Background="#f8f9fa"
+    Background="White"
     mc:Ignorable="d">
 
     <Grid>
@@ -16,8 +16,6 @@
             <RowDefinition Height="0.7*" />
             <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-
-
 
 
         <Border
@@ -46,12 +44,12 @@
 
 
                     <Button
-                        Name="Btn_AddOvertime"
+                        Name="Btn_GiveHollidau"
                         Width="150"
                         Height="30"
                         Margin="10,0,0,0"
-                        Click="Btn_AddOvertime_Click"
-                        Content="Создать"
+                        Click="Btn_GiveHollidau_Click"
+                        Content="Выдать"
                         Style="{StaticResource Button_Admin}" />
                 </StackPanel>
 
@@ -76,60 +74,46 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock
                     Name="Txb_employee"
-                    Width="150"
+                    Width="180"
                     FontSize="14"
                     Text="Сотрудник:" />
 
                 <ComboBox
                     Name="Cmb_employee"
                     Width="150"
-                    Margin="10,0,0,0" />
+                    Margin="10,0,0,0" SelectionChanged="Cmb_employee_SelectionChanged" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock
+                    Width="180"
+                    FontSize="14"
+                    Text="Не использованные часы:" />
+
+                <TextBlock
+                    Name="Txb_unused_hours"
+                    Width="150"
+                    FontSize="14"
+                    Text="0" 
+                    Margin="10,0,0,0"/>
             </StackPanel>
 
 
             <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
                 <TextBlock
-                    Name="Txb_dateovertime"
-                    Width="150"
+                    Name="Txb_dateholliday"
+                    Width="180"
                     FontSize="14"
                     Text="Дата:" />
 
                 <DatePicker
-                    Name="DatePicker_dateovertime"
+                    Name="DatePicker_dateholliday"
                     Width="150"
                     Margin="10,0,0,0" />
             </StackPanel>
 
 
-            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                <TextBlock
-                    Name="Txb_overtime"
-                    Width="150"
-                    FontSize="14"
-                    Text="Время переработки:" />
 
-                <ComboBox
-                    Name="Cmb_overtime"
-                    Width="150"
-                    Margin="10,0,0,0" />
-            </StackPanel>
-
-            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                <TextBlock
-                    Name="Txb_Description"
-                    Width="150"
-                    FontSize="14"
-                    Text="Описание:" />
-
-
-            </StackPanel>
-
-            <TextBox
-                Name="Txb_desc"
-                Height="100"
-                Margin="0,5,0,0"
-                AcceptsReturn="True"
-                TextWrapping="Wrap" />
 
 
 

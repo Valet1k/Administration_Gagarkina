@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Overtime_ADMModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище Overtime_ADMModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Department">
           <Key>
             <PropertyRef Name="DepartmentID" />
@@ -25,6 +25,7 @@
           <Property Name="Patronymic" Type="varchar" MaxLength="150" />
           <Property Name="Login" Type="varchar" MaxLength="100" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Total_hours" Type="int" />
         </EntityType>
         <EntityType Name="Overtime">
           <Key>
@@ -132,8 +133,7 @@
             <End Role="Overtime" EntitySet="Overtime" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Overtime_ADMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -162,6 +162,7 @@
           <NavigationProperty Name="Post" Relationship="Self.FK__Employee__PostID__3D5E1FD2" FromRole="Employee" ToRole="Post" />
           <NavigationProperty Name="Role" Relationship="Self.FK__Employee__RoleID__3F466844" FromRole="Employee" ToRole="Role" />
           <NavigationProperty Name="Overtime" Relationship="Self.FK__Overtime__Employ__4222D4EF" FromRole="Employee" ToRole="Overtime" />
+          <Property Name="Total_hours" Type="Int32" />
         </EntityType>
         <EntityType Name="Overtime">
           <Key>
@@ -289,6 +290,7 @@
           <EntitySetMapping Name="Employee">
             <EntityTypeMapping TypeName="Overtime_ADMModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Total_hours" ColumnName="Total_hours" />
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="PostID" ColumnName="PostID" />
                 <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />

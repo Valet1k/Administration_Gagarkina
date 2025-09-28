@@ -42,13 +42,29 @@
 
                     <Button
                         Name="Btn_add_overtime"
-                        Click="Btn_add_overtime_Click"
                         Width="150"
                         Height="30"
                         Margin="10"
+                        Click="Btn_add_overtime_Click"
                         Content="Добавить переработку"
                         Style="{StaticResource Button_Admin}" />
+
+                    <Button
+                        Name="Btn_givehollidays"
+                        Width="150"
+                        Height="30"
+                        Margin="10"
+                        Click="Btn_givehollidays_Click"
+                        Content="Выдать выходной"
+                        Style="{StaticResource Button_Admin}" />
+
                 </StackPanel>
+
+                <Image
+                    Width="80"
+                    Margin="10"
+                    HorizontalAlignment="Right"
+                    Source="/Image/герб.png" />
             </Grid>
         </Border>
 
@@ -124,6 +140,12 @@
                     <TextBlock
                         Name="Txb_total_hours_on_month"
                         Width="150"
+                        Margin="0,0,0,10"
+                        TextWrapping="Wrap" />
+
+                    <TextBlock
+                        Name="Txb_unused_hours_on_month"
+                        Width="150"
                         TextWrapping="Wrap" />
 
 
@@ -141,6 +163,12 @@
             AutoGenerateColumns="False"
             IsReadOnly="True"
             VerticalScrollBarVisibility="Auto">
+
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить" Click="MenuItem_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
 
             <DataGrid.Columns>
                 <DataGridTextColumn

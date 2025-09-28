@@ -27,6 +27,8 @@ namespace Administration_Gagarkina.Pages
         {
             InitializeComponent();
             GridAdmin.ItemsSource = ConnectBase.entObj.Employee.ToList();
+
+            
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -44,20 +46,17 @@ namespace Administration_Gagarkina.Pages
                 MessageBox.Show("Не удалось получить данные переработок сотрудника");
                 return;
             }
-            FrameApp.frmObj.Navigate(new Pages.Page_Employee(employee));
+            FrameApp.frmObj.Navigate(new Pages.Page_Employee(employee, true));
 
         }
 
         private void Btn_Back_Click(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmObj.GoBack();
+            FrameApp.frmObj.Navigate(new Pages.Page_Authorization());
         }
 
 
-        private void SearchTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
 
         private void Btn_Search_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +75,28 @@ namespace Administration_Gagarkina.Pages
         private void Btn_Addovertime_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frmObj.Navigate(new Pages.Page_AddOvertime());
+        }
+
+        private void Btn_Addemployee_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new Pages.Page_Registrarion());
+        }
+
+        private void Btn_give_holliday_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new Pages.Page_GiveHolliday());
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                string currentText = textBox.Text;
+
+                GridAdmin.ItemsSource = ConnectBase.entObj.Employee.Where(x => x.Surname.StartsWith(currentText)).ToList();
+
+            }
         }
     }
 }

@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Administration_Gagarkina.Pages.Page_info"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Administration_Gagarkina.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Page_info"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="#f8f9fa"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Border
+            Width="280"
+            Height="370"
+            Background="Transparent"
+            BorderBrush="Black"
+            BorderThickness="1,1,1,1"
+            CornerRadius="30,30,30,30">
+
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Image
+                        Width="40"
+                        Margin="120,50,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Source="/Image/info.png" />
+                </StackPanel>
+
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <TextBlock
+                        MaxWidth="255"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Text="При возникновении любых трудностей со входом в вашу учетную запись, пожалуйста, обратитесь за помощью к администратору системы. Он окажет вам необходимое содействие для оперативного решения вопроса!"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+
+                <StackPanel
+                    Margin="40"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal">
+                    <Button
+                        Name="Btn_back"
+                        Width="200"
+                        Height="30"
+                        Click="Btn_back_Click"
+                        Content="Назад на страницу авторизации"
+                        Style="{StaticResource Button_Admin}" />
+
+
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

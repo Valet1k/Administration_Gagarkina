@@ -14,50 +14,36 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.7*" />
+            <RowDefinition Height="0.9*" />
             <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
 
         <Border
             Grid.Row="0"
-            Width="799"
-            Height="70"
+            Height="90"
             VerticalAlignment="Top"
             Background="#f8f9fa"
             BorderBrush="Black"
             BorderThickness="1,1,1,1"
-            CornerRadius="10,10,20,20">
+            CornerRadius="0,0,20,20">
 
-            <Grid>
-
-                <Button
-                    Name="Btn_Back"
-                    Width="150"
-                    Height="30"
-                    Margin="0,0,120,0"
-                    Click="Btn_Back_Click"
-                    Content="Назад"
-                    Style="{StaticResource Button_Admin}" />
+            <Grid VerticalAlignment="Top">
 
 
-                <Button
-                    Name="Btn_Addovertime"
-                    Width="150"
-                    Height="30"
-                    Margin="190,0,0,0"
-                    Click="Btn_Addovertime_Click"
-                    Content="Добавить переработку"
-                    Style="{StaticResource Button_Admin}" />
+
 
                 <StackPanel>
                     <Image
-                        Width="45"
+                        Width="80"
                         Margin="10"
                         HorizontalAlignment="Right"
-                        Source="C:\Users\Valya\OneDrive\Рабочий стол\производственная практика №2\Administration_Gagarkina\Administration_Gagarkina\Image\профиль2.png" />
+                        Source="/Image/герб.png" />
                 </StackPanel>
 
                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+
+
+
 
                     <Border
                         Width="250"
@@ -110,7 +96,7 @@
                                 Background="Transparent"
                                 BorderThickness="0"
                                 FontSize="14"
-                                Foreground="Black" />
+                                Foreground="Black" TextChanged="SearchTextBox_TextChanged" />
                             <!--  Search Button  -->
                             <Button
                                 Name="Btn_Search"
@@ -132,6 +118,59 @@
                             </Button>
                         </Grid>
                     </Border>
+
+
+                    <StackPanel Margin="5 7 0 0">
+
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button
+                                Name="Btn_Back"
+                                Width="150"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                Click="Btn_Back_Click"
+                                Content="Назад"
+                                Style="{StaticResource Button_Admin}" />
+
+
+                            <Button
+                                Name="Btn_Addovertime"
+                                Width="150"
+                                Height="30"
+                                Margin="5,0,0,0"
+                                Click="Btn_Addovertime_Click"
+                                Content="Добавить переработку"
+                                Style="{StaticResource Button_Admin}" />
+
+                            <Button
+                                Name="Btn_Addemployee"
+                                Width="150"
+                                Height="30"
+                                Margin="5,0,0,0"
+                                Click="Btn_Addemployee_Click"
+                                Content="Добавить сотрудника"
+                                Style="{StaticResource Button_Admin}" />
+                        </StackPanel>
+
+
+                        <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Center">
+                            <Button
+                                Name="Btn_give_holliday"
+                                Width="150"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                Click="Btn_give_holliday_Click"
+                                Content="Выдать выходной"
+                                Style="{StaticResource Button_Admin}" />
+
+
+                          
+                        </StackPanel>
+
+
+                    </StackPanel>
+
                 </StackPanel>
             </Grid>
         </Border>

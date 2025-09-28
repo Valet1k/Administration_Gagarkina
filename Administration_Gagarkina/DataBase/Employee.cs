@@ -29,6 +29,7 @@ namespace Administration_Gagarkina.DataBase
         public string Patronymic { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public Nullable<int> Total_hours { get; set; }
     
         public virtual Department Department { get; set; }
         public virtual Post Post { get; set; }

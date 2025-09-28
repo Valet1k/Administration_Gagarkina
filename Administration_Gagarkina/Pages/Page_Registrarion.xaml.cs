@@ -25,6 +25,7 @@ namespace Administration_Gagarkina.Pages
         public Page_Registrarion()
         {
             InitializeComponent();
+
         }
 
         private void Btn_Registrarion_Click(object sender, RoutedEventArgs e)
@@ -49,10 +50,13 @@ namespace Administration_Gagarkina.Pages
                         Name = Txb_Name.Text,
                         Surname = Txb_Surname.Text,
                         Password = Psb_Passw.Password,
+                        Total_hours = 0,
+                        PostID = 11
+                        
                     };
                     ConnectBase.entObj.Employee.Add(userobj);
                     ConnectBase.entObj.SaveChanges();
-                    MessageBox.Show("Вы успешно зарегистрировались!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Сотрудник успешно зарегистрирован!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (Exception ex)
                 {

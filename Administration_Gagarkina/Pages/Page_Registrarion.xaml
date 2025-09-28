@@ -23,7 +23,10 @@
             <Grid>
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 0 0 10">
+                    <StackPanel
+                        Margin="0,0,0,10"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
                         <TextBox
                             x:Name="Txb_Name"
                             Width="250"
@@ -35,7 +38,10 @@
                             Tag="Name" />
                     </StackPanel>
 
-                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 0 0 10">
+                    <StackPanel
+                        Margin="0,0,0,10"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
                         <TextBox
                             x:Name="Txb_Surname"
                             Width="250"
@@ -47,7 +53,12 @@
                             Tag="Surname" />
                     </StackPanel>
 
-                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 0 0 10">
+                  
+
+                    <StackPanel
+                        Margin="0,0,0,10"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
                         <PasswordBox
                             x:Name="Psb_Passw"
                             Width="250"
@@ -99,16 +110,16 @@
 
                     <TextBlock>
                         <Run Text="Вернуться на страницу" />
-                        <Hyperlink NavigateUri="Page_Authorization.xaml">
+                        <Hyperlink NavigateUri="Page_Administrator.xaml">
                             <Run
                                 FontWeight="Bold"
                                 Foreground="#090933"
-                                Text="Авторизации" />
+                                Text="Администратора" />
                         </Hyperlink>
                     </TextBlock>
                 </Label>
 
-                
+
 
             </Grid>
         </Border>
